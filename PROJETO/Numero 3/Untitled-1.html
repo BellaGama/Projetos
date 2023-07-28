@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="WhatsApp Image 2022-01-07 at 13.17.37-650x650.jpeg" type="image/png"> <title>Compras</title>
+    <style>
+     #loginCad { width: 260px; }
+     #idEmail { width: 160px; }
+     #senhaCad { width: 180px; }
+     #lisSelProd { width: 370px; }
+     #selProduto { width: 75%; }
+     #btnIncluir { width: 70px; }
+     #boxPedidos { height: 100px; }
+     #lisPedArea {
+     height: 90%;
+     width: 100%;
+    }
+     #fSBandeira {
+     width: 80px;
+     text-align: left;
+    }
+     #numCartao {
+     width: 350px;
+     height: 35px;
+     padding-top: 10px;
+    }
+     #valCartao { width: 230px; height: 35px; }
+     #boxParcel { width: 230px; height: 30px; }
+     H1 {
+        font-family:lucia bright; 
+        color:#f79cd9;
+     }
+     H2 {
+        font-family:liberation;
+         color: #FFFFFF;
+         text-align: center;
+     }
+    
+     body 
+     {
+        color: #f79cd9;
+        font-size: 16px;
+        background-color: #cf6094;
+        font-family: stoke, Lucida Bright, liberation;
+     }  
+     header {
+     display:block;
+     margin-bottom: 1px;
+     }
+     nav {
+     display:block;
+     width: 20%;
+     float: left;
+     }
+     section {
+     display:block;
+     width: 70%;
+      float: right;
+     }
+     .ender {
+     float: right;
+     text-align: right;
+     font-size: 15px;
+     line-height: 140%;
+      font-family: karla, verdana, ubuntu;
+     }
+     img.imgLogo {
+     padding-bottom: 15px;
+     border-bottom: 3px solid #FFFFFF;
+     margin-bottom: 6px;
+     }
+     a:link { color:#FFFFFF; text-decoration:none; }
+      a:visited { color:#f79cd9; text-decoration:none; }
+     nav ul {
+     color: #FFFFFF;
+     margin-top: 40px;
+     line-height: 230%;
+     font-size: 20px;
+     font-family: karla, verdana, ubuntu;
+     list-style-image: url('Imagens/BrilhoMark.png');
+     }
+     div.apres {
+     text-align: center;
+      font-size: 18px;
+     }
+    </style>
+</head>
+<body>
+    <script>
+    var tabPrcProd =[ ["", 0],
+                           ["Sofisticada", 1890],
+                           ["Sol da manhã", 1200],
+                           ["Sol da tarde", 1200],
+                           ["Despojada", 1680],
+                           ["Paty", 1900]];
+    function IncluiLista(sel) {
+     var prod = sel.selectedIndex;
+     if ( prod != 0 ) {
+     var tip = tabPrcProd[prod][0];
+     var prc = tabPrcProd[prod][1];
+     sel.selectedIndex = 0;
+     with ( sel.form ) {
+     listaPedidos.value += tip + " " +
+     sel.options[prod].text + '\n';
+     TxtTotal.value= prc + parseInt(TxtTotal.value);
+     }
+     }else{
+     alert("Nenhum Produto selecionado!");
+    }
+     }
+</script>
+    <header> 
+        <h2>
+            <img src="589a43a65aa6293a4aac48af.png"alt="LogoBarbie"></p>
+        </h2> 
+            
+            <hr>   
+             <p rize=490px> 
+             </a>
+            <hr/>
+            </p>
+    </header>
+    <nav>
+    <ul><ul>
+        <li><a href="file:///C:/Users/Usu%C3%A1rio/Downloads/AD2/Numero%201%20da%20Ad1/Untitled-1.html">Tipos</a></li>
+        <li><a href="file:///C:/Users/Usu%C3%A1rio/Downloads/AD2/Numero%203%20da%20AD2/Untitled-1.html">Cadastro</a></li>
+        <li><a href="file:///C:/Users/Usu%C3%A1rio/Downloads/AD2/Numero%204%20da%20AD2/Untitled-1.html">Compras</a></li></ul>
+    </nav>
+    <section>
+
+
+        <div class="FormBox">
+        <h3 class="Titulo">Compras</h3>
+        <form method="POST">
+        <fieldset class="FSLinInteira">
+        <legend>Identificação</legend>
+        <div class="LinhaForm">
+        <span class="ColEsq" id="loginCad">
+        <label for="idEmail" class="LabBox">E-mail:</label>
+        <input type="email" class="InpBoxGnd"
+        id="idEmail" name="TxtEmail" required /></span>
+        <span class="ColDir" id="senhaCad">
+        <label for="idSenha" class="LabBox">Senha:</label>
+        <input id="idSenha" class="InpBoxMed"
+        type="password" name="TxtSenha" required /></span>
+        </div>
+        <div class="LinhaForm">
+        <b><i>Se você ainda não tem cadastro clique
+        <a href="file:///C:/Users/Usu%C3%A1rio/Downloads/AD2/Numero%203%20da%20AD2/Untitled-1.html">aqui</a></i></b>&nbsp;!</div>
+        </fieldset>
+        
+        
+        <fieldset class="FSLinInteira">
+        <legend> Lista de Compras&nbsp;</legend>
+        <div class="LinhaForm">
+        <span class="ColEsq" id="lisSelProd">
+        <label for="idEmail" class="LabBox">Produtos: </label>
+        <Select name="selProduto" id="selProduto" >
+        <option> ----- </option>
+        <optgroup label="Sofisticada">
+        <option>Sol da manha</option>
+        <option>Sol da tarde</option></optgroup>
+        <optgroup label="Despojada">
+        <option>Sol da manhã</option>
+        <option>Sol da tarde</option></optgroup>
+        <optgroup label="Paty">
+        <option>Sol da manha</option>
+        <option>Sol da tarde</option></optgroup>
+    
+    
+    
+       </select>
+        </span>
+
+        <span class="ColDir" id="btnIncluir">
+        <input type="button" value="Incluir" onclick="IncluiLista(selProduto)"/>
+        </span>
+        </div>
+        <div class="LinhaForm" id="boxPedidos">
+            <textarea name="listaPedidos" readonly
+            id="lisPedArea"></textarea>
+        </div>
+        <div class="LinhaForm">
+        <span class="ColDir">
+       <label class="LabBox" for="TxtTotal">Valor: R$</label>
+        <input type="text" name="TxtTotal" readonly id="TxtTotal" class="InpBoxMed" value="0" />
+        </span>
+        </div>
+        </fieldset>
+
+        
+
+        <fieldset class="FSLinInteira">
+        <legend> Dados do Cartão&nbsp;</legend>
+        <fieldset class="FSColDir" id="fSBandeira">
+        <legend> Bandeira:</legend>
+        <label><input type="radio" name="RadBand"
+        checked />Visa</label><br/>
+        <label><input type="radio" name="RadBand" />Master</label><br/>
+        <label><input type="radio" name="RadBand" />Elo</label>
+        </fieldset>
+        <div class="ColEsq" id="numCartao">
+        <label class="LabBox" for="TxtNumCC01">Número:</label>
+        <input type="text" name="TxtNumCC01"
+        id="TxtNumCC01" maxlength="4"
+        class="numDD" />&nbsp;
+        <input type="text" name="TxtNumCC02"
+        class="numDD" maxlength="4" />&nbsp;
+        <input type="text" name="TxtNumCC03"
+        class="numDD" maxlength="4" /> &nbsp;
+        <input type="text" name="TxtNumCC04"
+        class="numDD" maxlength="4" />
+        </div>
+        <br><br><br>
+        <div class="ColEsq" id="valCartao">
+        <label class="LabBox"
+         for="mesVal">Validade:</label>
+        <input type="number" name="TxtMesVal" id="mesVal"
+        min="1" max="12" class="numDD" value="1" /> /
+        <input type="number" name="TxtAnoVal" value="2022"
+        min="2022" max="2036" class="numQD" /></div>
+
+        <div class="ColEsq" id="boxParcel">
+        <label class="LabBox" 
+        for="numParcel">Parcelas:</label>
+        <input type="number" name="TxtMesVal" id="numParcel"
+        min="1" max="6" class="numDD"
+        value="1" /> x Sem Juros</div>
+        </fieldset>
+        
+        <div class="botoes">
+        <input type="submit" value="Confirmar" />
+        <input type="reset" value="Limpar" />
+        </div>
+        </div>
+        </section>
+
+
+</body>
+</html>

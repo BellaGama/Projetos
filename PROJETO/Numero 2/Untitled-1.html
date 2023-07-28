@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="WhatsApp Image 2022-01-07 at 13.17.37-650x650.jpeg" type="image/png">
+    <title>Questão 3 AD2</title>
+    <style>
+        H1 {
+           font-family:lucia bright; 
+           color:#f79cd9;
+        }
+        H2 {
+           font-family:liberation;
+            color: #FFFFFF;
+            text-align: center;
+        }
+       
+        body 
+        {
+           color: #f79cd9;
+           font-size: 16px;
+           background-color: #cf6094;
+           font-family: stoke, Lucida Bright, liberation;
+        }  
+        header {
+        display:block;
+        margin-bottom: 1px;
+        }
+        nav {
+        display:block;
+        width: 20%;
+        float: left;
+        }
+        section {
+        display:block;
+        width: 70%;
+         float: right;
+        }
+        .ender {
+        float: right;
+        text-align: right;
+        font-size: 15px;
+        line-height: 140%;
+         font-family: karla, verdana, ubuntu;
+        }
+        img.imgLogo {
+        padding-bottom: 15px;
+        border-bottom: 3px solid #FFFFFF;
+       margin-bottom: 6px;
+        }
+        a:link { color:#FFFFFF; text-decoration:none; }
+         a:visited { color:#f79cd9; text-decoration:none; }
+        nav ul {
+        color: #FFFFFF;
+        margin-top: 40px;
+        line-height: 230%;
+        font-size: 20px;
+        font-family: karla, verdana, ubuntu;
+        list-style-image: url('Imagens/BrilhoMark.png');
+        }
+        div.apres {
+         text-align: center;
+         font-size: 18px;
+        }
+        .FormBox {
+         width: 520px;
+         padding: 10px;
+         margin-top: 10px;
+         text-align: center;
+         background-color: #cf6094;
+         border: 3px solid #660027;
+         font-size: 16px;
+         font-family: karla, verdana, ubuntu;
+        }
+
+        .FSLinInteira {
+         color: white;
+         width: 490px;
+         text-align: left;
+         }
+         .FSColEsq {
+         width: 210px;
+         float: left;
+         text-align: center;
+        }
+        .FSColDir {
+         width: 210px;
+         float: right;
+         text-align: center;
+        }
+.LinhaForm {
+margin: 0px;
+height: 30px;
+padding: 6px 3px 0px 3px;
+}
+.ColEsq {
+width: 180px;
+float: left;
+display: block;
+}
+.ColDir {
+width: 180px;
+float: right;
+display: block;
+}
+.LabBox {
+width: 80px;
+float: left;
+display: block;
+}
+.InpBoxGnd {
+width: 384px;
+float: right;
+display: block;
+}
+
+.InpBoxMed {
+width: 80px;
+float: right;
+display: block;
+}
+.numDD { width:35px; }
+.numQD { width:50px; }
+.botoes {
+text-align: right;
+margin: 20px 10px 0px 10px;
+}
+#linhaEnder { height: 50px; }
+#inpEnder { height: 80%; width: 394px; }
+   
+       </style>
+       <script>
+           function VerificaTelef( campo, tam ) {
+           var a, b;
+           var strTel = campo.value;
+           if ( strTel.length != tam ) {
+           alert(campo.name + " tem de ter " + tam + " dígitos!");
+           return false;
+           }
+           for ( a = 0; a < tam; a++ ) {
+           b = strTel.charAt(a);
+           if ( (b < '0') || (b > '9')) {
+           alert(campo.name + " só pode ter" + " dígitos, caracter " + b + " inválido!");
+           return false;
+           }
+           }
+           
+           return true;
+           }
+           </script>
+   </head>
+   <body>
+   <header> 
+       <h2>
+      <img src="589a43a65aa6293a4aac48af.png"alt="LogoBarbie"></p>
+       </h2> 
+           
+           <hr>   
+            <p rize=490px> 
+            </a>
+           <hr/>
+           </p>
+   </header>
+   <nav>
+   <ul><ul>
+       <li><a href="file:///C:/Users/Usu%C3%A1rio/Downloads/AD2/Numero%201%20da%20Ad1/Untitled-1.html">Tipos</a></li>
+       <li><a href="file:///C:/Users/Usu%C3%A1rio/Downloads/AD2/Numero%203%20da%20AD2/Untitled-1.html">Cadastro</a></li>
+       <li><a href="file:///C:/Users/Usu%C3%A1rio/Downloads/AD2/Numero%204%20da%20AD2/Untitled-1.html">Compras</a></li></ul>
+   </nav>
+    
+<section>
+
+    <div class="FormBox">
+    <h3 class="Titulo">Cadastro</h3>
+    <form method="POST">
+    <fieldset class="FSLinInteira">
+    <legend>Identificação</legend>
+    <div class="LinhaForm">
+    <label for="idEmailGnd" class="LabBox">E-mail:</label>
+    <input id="idEmailGnd" class="InpBoxGnd"
+    type="email" name="TxtEmail" required /></div>
+    <div class="LinhaForm">
+    <span class="ColEsq">
+    <label for="idSenha" class="LabBox">Senha:</label>
+    <input id="idSenha" class="InpBoxMed"
+    type="password" name="TxtSenha" required /></span>
+    <span class="ColDir">
+    <label for="idConf" class="LabBox">Confirme:</label>
+    <input id="idConf" class="InpBoxMed"
+    type="password" name="TxtConf" required /></span>
+    </div>
+    </fieldset>
+    <fieldset class="FSLinInteira">
+    <legend>Dados Pessoais</legend>
+    <div class="LinhaForm">
+    <label for="idNome" class="LabBox">Nome:</label>
+    <input id="idNome" class="InpBoxGnd"
+    type="text" name="TxtNome" required /></div>
+    
+    <div class="LinhaForm" id="linhaEnder">
+    <label class="LabBox">Endereço: </label>
+    <textarea name="TxtEnder" class="InpBoxGnd"
+    id="inpEnder" ></textarea>
+    </div>
+    <div class="LinhaForm">
+    <span class="ColEsq">
+    <p><label class="colPri">Telefone:</label>
+    <input type="text" class="inpTelef" onChange="VerificaTelef(this, 8);" name="Telefone" required /></p>
+    <label class="colPri">Celular:</label>
+    <input type="text" class="inpTelef" onChange="VerificaTelef(this, 9);" name="Celular" />
+
+
+    </span></div>
+    <fieldset class="FSColEsq"><legend>Nacimento:</legend>
+    <input type="number" name="TxtDiaNasc"
+    min="1" max="31" class="numDD" /> /
+    <input type="number" name="TxtMesNasc"
+    min="1" max="12" class="numDD" /> /
+    <input type="number" name="TxtAnoNasc" 
+    min="1920" max="2000" class="numQD" />
+    </fieldset>
+    <fieldset class="FSColDir"><legend>Sexo:</legend>
+    <label><input type="radio" name="TglSexo"
+    value="M" />Mas</label>
+    <label><input type="radio" name="TglSexo"
+    value="F" />Fem</label>
+    <label><input type="radio" name="TglSexo"
+    value="O" checked />Outros</label>
+    </fieldset>
+    </fieldset>
+    <div class="botoes">
+    <input type="submit" value="Cadastrar" />
+    <input type="reset" value="Limpar" />
+    </div>
+    </div>
+</section>
+</body>
+</html>
